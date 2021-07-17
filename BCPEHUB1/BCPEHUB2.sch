@@ -4,9 +4,9 @@ EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
-Title ""
-Date ""
-Rev ""
+Title "Enviromental sensor measuring with ESP32"
+Date "2021-07-17"
+Rev "B"
 Comp ""
 Comment1 ""
 Comment2 ""
@@ -81,8 +81,6 @@ F 3 "" H 5400 1750 50  0001 C CNN
 $EndComp
 Text GLabel 9400 1500 2    39   Input ~ 0
 BAT+
-Text Notes 2300 1800 0    60   ~ 0
-+5
 $Comp
 L Device:R R8
 U 1 1 60E5C14F
@@ -145,8 +143,8 @@ Text GLabel 9400 2250 2    39   Input ~ 0
 BAT-
 Text GLabel 9400 2600 2    39   Input ~ 0
 GND
-Text Notes 5050 2100 0    39   ~ 0
-Set Charging\n Current to 130ma\n
+Text Notes 4750 2100 0    39   ~ 0
+Nastavení odporu R3\npro nabíjení proudem\n130mA až 1A
 Wire Wire Line
 	3200 1500 3500 1500
 Wire Wire Line
@@ -232,8 +230,6 @@ Wire Wire Line
 Connection ~ 5950 1350
 Wire Wire Line
 	5950 2400 5950 2100
-Text Notes 6000 1700 0    60   ~ 0
-ceramic cap\n
 $Comp
 L fs8205a:FS8205A U3
 U 1 1 60E5C1DB
@@ -289,7 +285,7 @@ Wire Wire Line
 	3900 1550 4200 1550
 Connection ~ 3900 1450
 Text Notes 1950 2100 0    60   ~ 0
-ceramic cap\n
+\n
 Text Notes 8550 1800 0    60   ~ 0
 ceramic cap\n
 Wire Wire Line

@@ -463,7 +463,7 @@ F 3 "~" H 3250 4000 50  0001 C CNN
 	0    1    1    0   
 $EndComp
 Text GLabel 3100 4000 0    39   Input ~ 0
-OUT-
+GND
 $Comp
 L Connector:Conn_01x02_Female J4
 U 1 1 60F415C1
@@ -495,26 +495,11 @@ F 3 "" H 1400 4300 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3150 4000 3150 4200
-Connection ~ 3150 4200
-Wire Wire Line
-	3150 4200 3150 5300
-Wire Wire Line
-	2150 4200 2150 4500
-Wire Wire Line
-	2150 4500 2000 4500
-Wire Wire Line
 	2000 4100 2100 4100
 Wire Wire Line
 	2100 4100 2100 4300
 Wire Wire Line
-	2250 4400 2250 4700
-Wire Wire Line
-	2250 4700 800  4700
-Wire Wire Line
 	800  4700 800  4400
-Wire Wire Line
-	2350 4500 2350 4800
 Wire Wire Line
 	2350 4800 700  4800
 Wire Wire Line
@@ -523,32 +508,19 @@ Wire Wire Line
 	700  4200 800  4200
 Wire Wire Line
 	3400 5200 2900 5200
-Wire Wire Line
-	2900 5200 2900 4500
 Connection ~ 2900 5200
-Wire Wire Line
-	2900 5600 2900 5200
 Wire Wire Line
 	3250 5300 3250 5400
 Wire Wire Line
 	3250 5400 3000 5400
 Wire Wire Line
-	3000 5400 3000 5500
-Wire Wire Line
 	3250 5300 3400 5300
 Connection ~ 3000 5400
 Wire Wire Line
 	3000 5400 2950 5400
-Wire Wire Line
-	2950 5400 2950 4400
-Wire Wire Line
-	2800 5400 2800 4300
 Connection ~ 4000 3400
 Wire Wire Line
 	4000 3400 3400 3400
-Wire Wire Line
-	2800 3400 2800 4300
-Connection ~ 2800 4300
 $Comp
 L SparkFun-Sensors:HTU21DSMD U6
 U 1 1 60FFE29D
@@ -561,15 +533,11 @@ F 3 "" H 1350 5450 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2100 5400 2100 4900
-Wire Wire Line
 	2100 4900 700  4900
 Wire Wire Line
 	700  4900 700  5350
 Wire Wire Line
 	700  5350 800  5350
-Wire Wire Line
-	2200 5300 2200 4850
 Wire Wire Line
 	600  4850 600  5450
 Wire Wire Line
@@ -743,14 +711,13 @@ Wire Wire Line
 Wire Wire Line
 	1550 7100 2300 7100
 Wire Wire Line
-	2300 7100 2300 5600
+	2300 7100 2300 6100
 Wire Wire Line
 	1550 6550 2150 6550
 Wire Wire Line
-	2150 6550 2150 5500
+	2150 6550 2150 6000
 Wire Wire Line
 	2100 4300 2000 4300
-Connection ~ 2100 4300
 $Comp
 L Device:R R12
 U 1 1 611072D8
@@ -789,8 +756,6 @@ Wire Wire Line
 	1000 3050 1000 3150
 Wire Wire Line
 	1000 3050 2100 3050
-Wire Wire Line
-	2100 3050 2100 4100
 Connection ~ 1000 3050
 Connection ~ 2100 4100
 $Comp
@@ -827,22 +792,6 @@ Wire Wire Line
 Connection ~ 4700 2400
 Wire Wire Line
 	4700 2400 5650 2400
-Wire Wire Line
-	2350 4500 2900 4500
-Wire Wire Line
-	2250 4400 2950 4400
-Wire Wire Line
-	2100 4300 2800 4300
-Wire Wire Line
-	2150 4200 3150 4200
-Wire Wire Line
-	2200 5300 3150 5300
-Wire Wire Line
-	2100 5400 2800 5400
-Wire Wire Line
-	2150 5500 3000 5500
-Wire Wire Line
-	2300 5600 2900 5600
 Text Notes 650  1700 0    50   ~ 0
 Vstup napětí ze solárních panelů
 Text Notes 9850 1650 0    50   ~ 0
@@ -904,4 +853,109 @@ Wire Wire Line
 Wire Wire Line
 	3400 3850 3400 4000
 Connection ~ 3400 4000
+$Comp
+L Connector:Conn_01x04_Female J11
+U 1 1 610F2B97
+P 2550 4700
+F 0 "J11" H 2442 4367 50  0000 C CNN
+F 1 "Conn_01x04_Female" H 2442 4366 50  0001 C CNN
+F 2 "" H 2550 4700 50  0001 C CNN
+F 3 "~" H 2550 4700 50  0001 C CNN
+	1    2550 4700
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J12
+U 1 1 611515EA
+P 2550 4700
+F 0 "J12" H 2522 4628 50  0000 R CNN
+F 1 "Conn_01x04_Male" H 2658 4890 50  0001 C CNN
+F 2 "" H 2550 4700 50  0001 C CNN
+F 3 "~" H 2550 4700 50  0001 C CNN
+	1    2550 4700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2800 3400 2800 4500
+Wire Wire Line
+	800  4700 2350 4700
+Wire Wire Line
+	2000 4500 2000 4600
+Wire Wire Line
+	2000 4600 2350 4600
+Wire Wire Line
+	2100 3050 2100 4100
+Wire Wire Line
+	2100 4300 2100 4500
+Wire Wire Line
+	2100 4500 2350 4500
+Connection ~ 2100 4300
+Wire Wire Line
+	3150 6850 4000 6850
+Connection ~ 4000 6850
+Wire Wire Line
+	3150 4600 2750 4600
+Wire Wire Line
+	2800 4500 2750 4500
+Connection ~ 2800 4500
+Wire Wire Line
+	2750 4800 2900 4800
+Wire Wire Line
+	2900 4800 2900 5200
+Wire Wire Line
+	2750 4700 2950 4700
+Wire Wire Line
+	2950 4700 2950 5400
+$Comp
+L Connector:Conn_01x04_Female J13
+U 1 1 612CF0AB
+P 2600 6000
+F 0 "J13" H 2492 5667 50  0000 C CNN
+F 1 "Conn_01x04_Female" H 2492 5666 50  0001 C CNN
+F 2 "" H 2600 6000 50  0001 C CNN
+F 3 "~" H 2600 6000 50  0001 C CNN
+	1    2600 6000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x04_Male J14
+U 1 1 612CF0B1
+P 2600 6000
+F 0 "J14" H 2572 5928 50  0000 R CNN
+F 1 "Conn_01x04_Male" H 2708 6190 50  0001 C CNN
+F 2 "" H 2600 6000 50  0001 C CNN
+F 3 "~" H 2600 6000 50  0001 C CNN
+	1    2600 6000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	3150 4600 3150 5900
+Wire Wire Line
+	2200 5900 2400 5900
+Wire Wire Line
+	2200 4850 2200 5900
+Wire Wire Line
+	2100 5800 2400 5800
+Wire Wire Line
+	2100 4900 2100 5800
+Wire Wire Line
+	2800 4500 2800 5800
+Wire Wire Line
+	2800 5900 3150 5900
+Connection ~ 3150 5900
+Wire Wire Line
+	3150 5900 3150 6850
+Wire Wire Line
+	2150 6000 2400 6000
+Wire Wire Line
+	3000 6000 2800 6000
+Wire Wire Line
+	3000 5400 3000 6000
+Wire Wire Line
+	2300 6100 2400 6100
+Wire Wire Line
+	2900 6100 2800 6100
+Wire Wire Line
+	2900 5200 2900 6100
+NoConn ~ 950  5550
 $EndSCHEMATC
