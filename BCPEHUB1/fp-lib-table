@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name lib)(type KiCad)(uri C:/Users/hubac/OneDrive/Documents/KiCAD/Charger_TP4056/tp4056-master/lib)(options "")(descr ""))
+  (lib (name DW01A)(type KiCad)(uri C:/Users/hubac/OneDrive/Documents/KiCAD/DW01A)(options "")(descr ""))
+  (lib (name FS8205A)(type KiCad)(uri C:/Users/hubac/OneDrive/Documents/KiCAD/FS8205A)(options "")(descr ""))
+)
