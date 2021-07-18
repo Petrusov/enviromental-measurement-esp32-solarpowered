@@ -17,8 +17,8 @@
 
 
 // Připojení k Wifi
-const char* ssid = "whatever2";
-const char* password = "antilopa0";
+const char* ssid = "SSID";
+const char* password = "password";
 
 // Adresa MQTT Brokeru:
 //const char* mqtt_server = "192.168.1.9";
