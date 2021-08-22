@@ -14,8 +14,8 @@
 
 // Zde se definuje přepočet s na us, pro funkci deep sleep
 uint64_t uS_TO_S_FACTOR = 1000000; 
-// 15 minut = 900 sekund
-uint64_t TIME_TO_SLEEP = 120; 
+// 10 minut = 600 sekund
+uint64_t TIME_TO_SLEEP = 600; 
 
 // Připojení k Wifi
 const char* ssid = "SSID";
