@@ -112,24 +112,24 @@ if (!client.connected()) {
     getHTUreadings();
     // Convert the value to a char array
     char HTUString[8];
-/*    dtostrf(tempHTU, 1, 2, HTUString);
+    dtostrf(tempHTU, 1, 2, HTUString);
     Serial.print("Teplota HTU: ");
     Serial.println(HTUString);
     client.publish("esp32/tempHTU", HTUString);
-*/    
+    
     dtostrf(humiHTU, 1, 2, HTUString);
     Serial.print("Vlhkost HTU: ");
     Serial.println(HTUString);
     client.publish("esp32/humidityHTU", HTUString);
 
     calcDefPoint(tempDS, humiHTU);
-/*    Serial.println(dewpoint);
+   Serial.println(dewpoint);
     char DPString[8];
     dtostrf(dewpoint, 5, 2, DPString);
     Serial.print("Rosný bod: ");
     Serial.println(DPString);
     client.publish("esp32/dewpoint", DPString);
-  */
+  
   // Vše provedeno, aktivuje se deep sleep, odečítá se čas od startu programu
   
    delay(500);
@@ -201,14 +201,6 @@ void getSolarVoltage(){
   Serial.println(SolarValue);
 }
 
-/*void getDSReadings(){
-  senzorDS.requestTemperatures(); 
-  tempDS = senzorDS.getTempCByIndex(0); // Teplota v C
-  Serial.print("Teplota Dalas: ");
-  Serial.print(tempDS);
-  //Serial.print(",");
-}
-*/
 void getBMPreadings(){
  // tempBMP = senzorBMP.readTemperature(); 
   pressureBMP =  (senzorBMP.readPressure()+korekce*100)/100;
