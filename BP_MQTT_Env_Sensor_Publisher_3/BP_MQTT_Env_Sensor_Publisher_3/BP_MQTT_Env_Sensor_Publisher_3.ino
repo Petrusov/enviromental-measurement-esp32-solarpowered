@@ -138,6 +138,8 @@ if (!client.connected()) {
   Serial.println("Vše vyčteno a publikováno a teď jdu spát");
   unsigned long myTime = millis();
   esp_sleep_enable_timer_wakeup(TIME_TO_SLEEP * uS_TO_S_FACTOR - myTime);
+  esp_bt_controller_disable();
+  
   esp_deep_sleep_start(); 
 }
 
